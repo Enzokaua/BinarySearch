@@ -1,31 +1,47 @@
-# Twiit - Plataforma pessoal
+# Busca Binária - Algoritmo
 
-> Twiit é um desenvolvimento pessoal de como funcionaria o back-end de uma aplicação de mídia social como o Instagram e o Facebook por exemplo. O projeto conta com escopos de segurança e autenticação utilizando geração de tokens
-através do JWT e do OAuth2, suas funcionalidades são as necessárias para que este fluxo funcione corretamente. A aplicação tem as principais funcionalidades:
-> - Um usuário administrador pode criar outros usuários;
-> - Um usuário pode efetuar um login e assim terá um token de autenticação;
-> - Todos os usuários logados consegue gerar tweets (Verificacao através do token quando efetuado o login);
-> - Todos os usuários logados conseguem ver todos os tweets criados (com paginação)
-> - Somente o usuário quem criou o seu tweet, pode deletá-lo;
-> - Um usuário Administrador pode criar outros usuários Administradores;
-> - Um usuário básico não pode criar usuários;
-
+> Este repositório contém a implementação do algoritmo de Busca Binária, conforme apresentado no livro *Entendendo Algoritmos*. O projeto tem como objetivo servir de base para estudo e referência, podendo ser expandido para outros algoritmos descritos no livro. A busca binária é uma técnica eficiente para encontrar um elemento em uma lista ordenada, reduzindo o número de comparações pela metade a cada iteração.
 
 ## 💻 Pré-requisitos
 
-Caso deseje instalar o projeto para verificar, fique a vontade! Antes de começar, é necessário que os seguintes passos estejam configurados:
+Para executar este projeto, certifique-se de ter as seguintes ferramentas configuradas no seu ambiente:
 
-- Java 21 ou superior instalado no ambiente;
-- Maven instalado e apontado nas variáveis de ambiente;
-- Geração da chave pública e privada através do OpenSSL (O projeto conta com uma chave pública e privada default, mas é de extrema necessidade que seja gerada uma referente ao seu ambiente);
-
+- **Java 21** ou superior;
+- **Apache Maven** para gerenciamento de dependências e build do projeto;
+- Editor ou IDE de sua escolha (IntelliJ IDEA, Eclipse, VS Code, etc.).
 
 ## 🚀 Sobre o projeto
 
-O projeto ainda está em desenvolvimento, não possuindo um frontend integrado com a aplicação, tendo que suas requisições sejam acessadas diretamente aos endpoints. Este projeto foi inicialmente criado para testar as habilidades em JWT e OAuth, alternativas de segurança na qual venho interagindo com elas a algum tempo. O projeto foi desenvolvido com Java 21, Spring como framework, JWT e OAuth como tecnologias de segurança de usuário, e, JPA e MySql como mapeamento de objetos e banco de dados. Foi desenvolvido alguns passos com o SSL para geração da chave pública e privada necessárias ao JWT, mas que fogem do escopo deste projeto. 
+O projeto utiliza uma abordagem simples com Java para implementar o algoritmo de busca binária. Ele foi criado com o propósito de aplicar, estudar e compreender algoritmos fundamentais descritos no livro *Entendendo Algoritmos*. Além disso, foi estruturado de forma modular para facilitar a reutilização e adaptação do código para diferentes cenários.
 
+### ✨ Funcionalidades
 
-## :coffee: Contratos da API
-O projeto conta com as funcionalidades detalhadas em seu descritivo e as suas necessidades antes do deploy em sua máquina pessoal já mencionadas. Com estes 2 pontos configurados, já é possível subir o projeto e realizar um teste com sua integração verificando os constratos passados no swagger.yaml.
+- Implementação do algoritmo de busca binária;
+- Testes simples para validar a lógica do algoritmo;
+- Entrada customizável para arrays ordenados e valores de busca.
 
-Em caso de dúvida ou alterações, estou a disposição. Abraços! 👋
+### 🛠️ Tecnologias Utilizadas
+
+- **Java**: Linguagem de programação principal do projeto;
+- **Apache Maven**: Ferramenta de build e gerenciamento de dependências;
+- **Java Simple**: Estilo direto e simplificado para a implementação dos algoritmos.
+
+## 📚 Como Funciona o Algoritmo
+
+A busca binária funciona dividindo repetidamente uma lista ordenada ao meio e comparando o valor buscado com o elemento central da lista:
+
+1. Verifica se a lista está vazia. Se sim, o elemento não foi encontrado.
+2. Encontra o elemento do meio da lista.
+3. Compara o valor buscado com o elemento do meio:
+   - Se forem iguais, o valor foi encontrado.
+   - Se o valor for menor, a busca continua na metade inferior.
+   - Se o valor for maior, a busca continua na metade superior.
+4. O processo se repete até que o valor seja encontrado ou que a lista esteja vazia.
+
+A complexidade da busca binária é **O(log n)**.
+
+## 🛠️ Configuração e Execução
+
+1. Clone este repositório:
+   ```bash
+   git clone https://github.com/seu-usuario/busca-binaria.git
