@@ -44,4 +44,4 @@ A complexidade da busca binária é **O(log n)**.
 
 1. Clone este repositório:
    ```bash
-   git clone https://github.com/seu-usuario/busca-binaria.git
+   git clone https://github.com/enzokaua/algorithm-binary-search.git
